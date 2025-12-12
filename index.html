@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafeHer - One Tap Emergency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- BACK BUTTON -->
+        <button id="backBtn" class="back-btn" style="display:none;">🏠 Home</button>
+        
+        <h1 id="mainTitle">🚨 SafeHer Emergency</h1>
+        
+        <!-- HOME SCREEN (Phase 1) -->
+        <div id="homeScreen">
+            <button id="sosBtn" class="sos-button">🚨 SEND SOS NOW</button>
+            <div id="status">Ready</div>
+            
+            <button id="mapBtn" class="sos-button map-btn">🗺️ Safety Map</button>
+            <button id="meshBtn" class="sos-button mesh-btn">📡 Offline SOS</button>
+            <button id="policeBtn" class="sos-button police-btn">🚔 Police Help</button>
+        </div>
+        
+        <!-- PHASE 2: MAP SCREEN -->
+        <div id="mapScreen" class="screen" style="display:none;">
+            <h3>🗺️ Safety Score Map</h3>
+            <div id="map" style="height:300px;width:100%;border-radius:10px;background:#ddd;"></div>
+            <div id="safetyScore"></div>
+        </div>
+        
+        <!-- PHASE 3: MESH SCREEN -->
+        <div id="meshScreen" class="screen" style="display:none;">
+            <h3>📡 Offline Mesh Network</h3>
+            <div id="meshStatus"></div>
+            <div id="nearbyUsers"></div>
+        </div>
+        
+        <!-- PHASE 4: POLICE SCREEN -->
+        <div id="policeScreen" class="screen" style="display:none;">
+            <h3>🚔 Police Response</h3>
+            <div id="policeStatus"></div>
+            <div id="policeTracking"></div>
+            <div id="responseStats"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
