@@ -75,3 +75,55 @@ document.getElementById('policeBtn').onclick = () => {
         `;
     }, 1500);
 };
+// 🔥 SPLASH SCREEN (2.5 sec beauty)
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.getElementById('splashScreen').style.display = 'none';
+    }, 2500);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 🔥 FAKE CALL BUTTON
+    const fakeCallBtn = document.getElementById('fakeCallBtn');
+    if(fakeCallBtn) {
+        fakeCallBtn.addEventListener('click', () => {
+            document.getElementById('homeScreen').style.display = 'none';
+            document.getElementById('fakeCallScreen').style.display = 'block';
+            
+            const callerLabel = document.getElementById('callerLabel');
+            const callTimer = document.getElementById('callTimer');
+            callerLabel.textContent = 'Calling Papa…';
+            callTimer.textContent = 'Ringing…';
+            
+            setTimeout(() => {
+                callerLabel.textContent = 'Incoming call…';
+                callTimer.textContent = '00:00';
+                setupFakeCallButtons();
+            }, 3000);
+        });
+    }
+    
+    // TUMHARE BAQI BUTTONS YAHAN (voiceBtn, mapBtn, policeBtn)
+    // Tumhara original code same copy-paste kar do
+});
+
+function setupFakeCallButtons() {
+    let seconds = 0;
+    
+    document.getElementById('rejectCall').onclick = () => {
+        document.getElementById('callerLabel').textContent = 'Call declined';
+        setTimeout(() => {
+            document.getElementById('homeScreen').style.display = 'block';
+            document.getElementById('fakeCallScreen').style.display = 'none';
+        }, 1500);
+    };
+    
+    document.getElementById('acceptCall').onclick = () => {
+        document.getElementById('callerLabel').textContent = 'On call with Papa';
+        setInterval(() => {
+            seconds++;
+            document.getElementById('callTimer').textContent = 
+                `${Math.floor(seconds/60).toString().padStart(2,'0')}:${(seconds%60).toString().padStart(2,'0')}`;
+        }, 1000);
+    };
+}

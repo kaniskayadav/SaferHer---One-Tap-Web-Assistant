@@ -67,7 +67,10 @@ body {
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: block;
+    display: block;#voiceBtn {
+    background: linear-gradient(45deg, #9C27B0, #7B1FA2);
+}
+
     text-align: center;
 }
 
@@ -205,3 +208,66 @@ body {
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 20px;
 }
+
+#voiceBtn {
+    background: linear-gradient(45deg, #9C27B0, #7B1FA2);
+}
+
+/* Fake call card */
+
+#fakeCallCard {
+    margin-top: 20px;
+    background: radial-gradient(circle at top, #263238, #000000);
+    border-radius: 30px;
+    padding: 30px 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+#callerName {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#callerLabel {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+#callTimer {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+#callButtons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.call-btn {
+    width: 110px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+}
+
+.call-btn:hover {
+    transform: translateY(-2px);
+}
+
+.call-btn.reject {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+}
+
+.call-btn.accept {
+    background: linear-gradient(45deg, #4CAF50, #388E3C);
+}
+
+@keyframes spin { 0% { transform:rotate(0deg); } 100% { transform:rotate(360deg); } }
