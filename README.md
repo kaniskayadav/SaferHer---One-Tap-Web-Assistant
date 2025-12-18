@@ -107,5 +107,9 @@ The project is built as a 4‑phase safety system with an additional voice layer
 
 Built by **Kaniska Yadav** as part of a women’s safety hackathon project.  
 Focused on **SDG 5 – Gender Equality** and safer mobility for women.
+
 Built by **Kaniska Yadav** as part of a women’s safety hackathon project.  
 Focused on **SDG 5 – Gender Equality** and safer mobility for women.
+Built by **Kaniska Yadav** as part of a women’s safety hackathon project.  
+Focused on **SDG 5 – Gender Equality** and safer mobility for women.
+
